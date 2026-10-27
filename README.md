@@ -53,7 +53,7 @@ Fastero, pick a workspace if asked, and approve. In Copilot Chat, use Agent mode
 ### Claude
 
 Fastero is in [Claude's connector directory](https://claude.ai/directory/connectors/fastero). In
-claude.ai, open **Customize → Connectors**, click **+**, find **Fastero** and choose **Connect**. Then
+claude.ai, open **Customize → Connectors**, choose **Discover**, search for **Fastero** and choose **Connect to Claude**. Then
 sign in to Fastero, pick a workspace if asked, and approve. On a Team or Enterprise plan, an owner adds
 Fastero under **Organization settings → Connectors**, and each member then connects.
 
@@ -106,7 +106,7 @@ Keys last up to 90 days, and Fastero notifies you in the app 14 and 3 days befor
 Every workspace also has an address of its own,
 `https://api.fastero.com/api/v1/mcp/org/<workspace id>`. **AI Agent Access** shows it with a copy
 button. In claude.ai, connect the first workspace from the directory, then add each other workspace as
-a custom connector (**Customize → Connectors → + → Add custom connector**) with its own address, named
+a custom connector (**Customize → Connectors → Add custom connector**) with its own address, named
 after the workspace.
 
 ## Security
