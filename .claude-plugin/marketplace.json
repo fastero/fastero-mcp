@@ -1,0 +1,12 @@
+{
+  "name": "fastero",
+  "description": "The Fastero plugin for Claude Code.",
+  "owner": { "name": "Fastero", "url": "https://fastero.com" },
+  "plugins": [
+    {
+      "name": "fastero",
+      "source": "./",
+      "description": "Build dashboards your team opens with their own login, host Streamlit apps, and run notebooks and Python on a schedule, on your own databases."
+    }
+  ]
+}

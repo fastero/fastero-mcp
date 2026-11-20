@@ -12,6 +12,11 @@ https://api.fastero.com/api/v1/mcp
 
 It is listed in the official MCP Registry as `com.fastero/fastero`.
 
+**Install:** [Add to Cursor](https://cursor.com/install-mcp?name=fastero&config=eyJ1cmwiOiJodHRwczovL2FwaS5mYXN0ZXJvLmNvbS9hcGkvdjEvbWNwIn0%3D)
+· [Install in VS Code](https://insiders.vscode.dev/redirect/mcp/install?name=fastero&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fapi.fastero.com%2Fapi%2Fv1%2Fmcp%22%7D)
+· [Claude's connector directory](https://claude.ai/directory/connectors/fastero)
+· [Claude Code plugin](#claude-code-plugin)
+
 ## What you can do
 
 Ask in plain words. Your assistant works inside your Fastero workspace, and what it builds stays
@@ -31,10 +36,28 @@ there for your team:
 
 You need a Fastero account: [sign up](https://app.fastero.com/signup?utm_source=github&utm_medium=listing&utm_campaign=aud2-agents).
 
+### Cursor
+
+[Add to Cursor](https://cursor.com/install-mcp?name=fastero&config=eyJ1cmwiOiJodHRwczovL2FwaS5mYXN0ZXJvLmNvbS9hcGkvdjEvbWNwIn0%3D)
+opens Cursor and asks whether to add Fastero. Or add it to `~/.cursor/mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "fastero": {
+      "url": "https://api.fastero.com/api/v1/mcp"
+    }
+  }
+}
+```
+
+When Cursor asks you to sign in, sign in to Fastero, pick a workspace if asked, and approve.
+
 ### VS Code (GitHub Copilot)
 
-Open the Command Palette and run **MCP: Add Server**, choose **HTTP**, and paste the address above.
-Or add it to your `mcp.json`:
+[Install in VS Code](https://insiders.vscode.dev/redirect/mcp/install?name=fastero&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fapi.fastero.com%2Fapi%2Fv1%2Fmcp%22%7D)
+opens VS Code and asks whether to add Fastero. Or open the Command Palette and run **MCP: Add Server**, choose
+**HTTP**, and paste the address above. Or add it to your `mcp.json`:
 
 ```json
 {
@@ -59,6 +82,29 @@ Fastero under **Organization settings → Connectors**, and each member then con
 
 The connector also works in Claude Desktop, and Claude Code signed in with the same Claude account
 picks it up automatically.
+
+### Claude Code plugin
+
+This repository is also a Claude Code plugin. In Claude Code:
+
+```
+/plugin marketplace add fastero/fastero-mcp
+/plugin install fastero@fastero
+```
+
+Then run `/mcp`, choose **plugin:fastero:fastero** and sign in to Fastero.
+
+Besides this README, its licence and its icon, the plugin holds two skills and the server's address:
+
+- **dashboards** tells Claude how to build a dashboard in Fastero that your team opens with their own login:
+  finding your data, using your team's definitions, saving charts, sharing and emailing the dashboard, and
+  alerts.
+- **apps** tells Claude how to host a Streamlit app behind your team's login and run notebooks and Python
+  scripts on a schedule.
+- `.mcp.json` names Fastero's MCP server, `https://api.fastero.com/api/v1/mcp`.
+
+The skills are text. Nothing in the plugin runs on your computer, and the only place it connects to is
+Fastero's MCP server, which you sign in to.
 
 ### Other MCP clients
 
